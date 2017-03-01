@@ -125,6 +125,7 @@
     int main(void)
     {
         WDT_A_holdTimer();
+
         initI2C();
         //initUART();
 
