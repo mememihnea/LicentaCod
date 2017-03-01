@@ -1,0 +1,7 @@
+
+**** Build of configuration Debug for project CombineIT ****
+
+"C:\\Program Files (x86)\\TI\\ccsv6\\utils\\bin\\gmake" -k -j 4 all -O 
+gmake[1]: 'CombineIT.out' is up to date.
+
+**** Build Finished ****
