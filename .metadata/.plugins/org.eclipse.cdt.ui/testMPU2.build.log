@@ -1,0 +1,26 @@
+
+**** Build of configuration Debug for project testMPU2 ****
+
+"C:\\Program Files (x86)\\TI\\ccsv6\\utils\\bin\\gmake" -k all 
+'Building file: ../main.c'
+'Invoking: MSP432 Compiler'
+"C:/Program Files (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Program Files (x86)/TI/ccsv6/ccs_base/arm/include" --include_path="C:/ti/tirex-content/msp/msp432ware__3.50.00.02/driverlib/driverlib/MSP432P4xx" --include_path="C:/Program Files (x86)/TI/ccsv6/ccs_base/arm/include/CMSIS" --include_path="C:/Program Files (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include" --advice:power=all -g --gcc --define=__MSP432P401R__ --define=TARGET_IS_MSP432P4XX --define=ccs --diag_wrap=off --diag_warning=225 --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:7: recipe for target 'main.obj' failed
+"../main.c", line 42: error #20: identifier "EUSCI_A0_MODULE" is undefined
+"../main.c", line 50: error #20: identifier "NVIC_ISER0" is undefined
+"../main.c", line 65: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 66: remark #1527-D: (ULP 2.1) Detected SW delay loop using empty loop. Recommend using a timer module instead
+"../main.c", line 79: error #20: identifier "SCB_SCR" is undefined
+"../main.c", line 79: error #20: identifier "SCB_SCR_SLEEPONEXIT" is undefined
+"../main.c", line 85: error #20: identifier "SCB_SCR" is undefined
+"../main.c", line 85: error #20: identifier "SCB_SCR_SLEEPONEXIT" is undefined
+"../main.c", line 87: error #20: identifier "EUSCI_A0_MODULE" is undefined
+"../main.c", line 92: error #20: identifier "SCB_SCR" is undefined
+"../main.c", line 92: error #20: identifier "SCB_SCR_SLEEPONEXIT" is undefined
+9 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

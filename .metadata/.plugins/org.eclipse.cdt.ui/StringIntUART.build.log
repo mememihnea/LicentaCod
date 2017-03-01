@@ -1,0 +1,14 @@
+
+**** Clean-only build of configuration Debug for project StringIntUART ****
+
+"C:\\Program Files (x86)\\TI\\ccsv6\\utils\\bin\\gmake" -k -j 4 clean -O 
+DEL /F  "StringIntUART.out"  "StringIntUART.hex" 
+DEL /F "main.d" "startup_msp432p401r_ccs.d" "system_msp432p401r.d" 
+DEL /F "main.obj" "startup_msp432p401r_ccs.obj" "system_msp432p401r.obj" 
+Could Not Find D:\Scoala\LICENTA\Code\StringIntUART\Debug\StringIntUART.out
+Could Not Find D:\Scoala\LICENTA\Code\StringIntUART\Debug\main.d
+Could Not Find D:\Scoala\LICENTA\Code\StringIntUART\Debug\main.obj
+'Finished clean'
+' '
+
+**** Build Finished ****

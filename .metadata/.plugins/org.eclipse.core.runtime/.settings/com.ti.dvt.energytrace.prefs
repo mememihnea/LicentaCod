@@ -1,0 +1,4 @@
+AutoStart=true
+TargetConnection=XDS110
+TargetDevice=MSP432
+eclipse.preferences.version=1

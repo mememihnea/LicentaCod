@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SynchronizeViewSettings">
+		<item value="false" key="linkWithEditor"/>
+		<item value="1488374734006" key="lastactiveparticipant_sec_id"/>
+		<item value="org.eclipse.egit.ui.modelCompareParticipant" key="lastactiveparticipant_id"/>
+		<section name="org.eclipse.egit.ui.modelCompareParticipant.1488374734006">
+		</section>
+	</section>
+	<section name="ImportPSFDialog">
+		<item value="https://github.com/mememihnea/Licenta/tree/master/uart_pc_echo_12mhz_brclk" key="previous_url"/>
+		<list key="urls">
+			<item value="https://github.com/mememihnea/Licenta/tree/master/uart_pc_echo_12mhz_brclk"/>
+		</list>
+	</section>
+</section>
