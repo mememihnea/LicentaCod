@@ -1,16 +1,16 @@
 /* DriverLib Includes */
 #include "driverlib.h"
 #include "msp.h"
+
 /* Standard Includes */
 #include <stdint.h>
 #include <string.h>
 #include <stdbool.h>
+
+#include "i2cCommunication.h"
 /* Own Libraries Includes */
-#include "i2c.h"
-#include "uart.h"
 #include "lightSensor.h"
-
-
+#include "uartCommunication.h"
 
 void ownDelay(int number){
 	int i=0;
@@ -18,15 +18,13 @@ void ownDelay(int number){
 		i++;
 }
 
-
-
 int main(void)
 {
 	WDT_A_holdTimer();
 
-	uint8_t readValue;
+	uint16_t readValue;
 
-	initI2C();
+	initI2C(0x1E);
 	initUART();
 
 	ALSensorConfigure();
@@ -34,7 +32,6 @@ int main(void)
 	{
 		readValue = ALSensorReadData();
 		sendInt(readValue);
-
-		ownDelay(1000);
+		ownDelay(100000);
 	}
 }

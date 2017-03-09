@@ -45,9 +45,9 @@ main.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/uart.h
 main.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.h
 main.obj: C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/string.h
 main.obj: C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/linkage.h
-main.obj: ../i2c.h
-main.obj: ../uart.h
+main.obj: ../i2cCommunication.h
 main.obj: ../lightSensor.h
+main.obj: ../uartCommunication.h
 
 ../main.c: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/driverlib.h: 
@@ -94,6 +94,6 @@ C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/uart.h:
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/string.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/linkage.h: 
-../i2c.h: 
-../uart.h: 
+../i2cCommunication.h: 
 ../lightSensor.h: 
+../uartCommunication.h: 

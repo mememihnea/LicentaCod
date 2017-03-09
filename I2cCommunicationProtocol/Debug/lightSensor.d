@@ -1,8 +1,7 @@
 # FIXED
 
 lightSensor.obj: ../lightSensor.c
-lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/driverlib.h
-lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/adc14.h
+lightSensor.obj: ../lightSensor.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdint.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/msp.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/msp432p401r.h
@@ -14,6 +13,8 @@ lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/CMSIS/co
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/CMSIS/core_cmFunc.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/CMSIS/core_cmSimd.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/system_msp432p401r.h
+lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/driverlib.h
+lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/adc14.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdbool.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/aes256.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/comp_e.h
@@ -45,11 +46,10 @@ lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/uart.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/string.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/linkage.h
-lightSensor.obj: ../lightSensor.h
+lightSensor.obj: ../i2cCommunication.h
 
 ../lightSensor.c: 
-C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/driverlib.h: 
-C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/adc14.h: 
+../lightSensor.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdint.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/msp.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/msp432p401r.h: 
@@ -61,6 +61,8 @@ C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/CMSIS/core_cmInstr.h:
 C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/CMSIS/core_cmFunc.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/CMSIS/core_cmSimd.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/ccs_base/arm/include/system_msp432p401r.h: 
+C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/driverlib.h: 
+C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/adc14.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/stdbool.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/aes256.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/comp_e.h: 
@@ -92,4 +94,4 @@ C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/uart.h:
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/string.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/linkage.h: 
-../lightSensor.h: 
+../i2cCommunication.h: 
