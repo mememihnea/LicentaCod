@@ -18,16 +18,19 @@ void ownDelay(int number){
 		i++;
 }
 
+
+
 int main(void)
 {
 	WDT_A_holdTimer();
 
 	uint16_t readValue;
 
-	initI2C(0x1E);
+	initI2C(&i2cInitStructure);
 	initUART();
 
 	ALSensorConfigure();
+
 	while (1)
 	{
 		readValue = ALSensorReadData();
