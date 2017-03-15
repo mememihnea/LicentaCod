@@ -7,16 +7,22 @@
 #include <string.h>
 #include <stdbool.h>
 
-#include "i2cCommunication.h"
 /* Own Libraries Includes */
+#include "i2cCommunication.h"
 #include "lightSensor.h"
 #include "uartCommunication.h"
 
-void ownDelay(int number){
-	int i=0;
-	while(i<number)
-		i++;
-}
+
+
+const i2cInitialisationStructure i2cInitStructure =
+{
+		0x1E,									// Slave Address
+		GPIO_PORT_P1,							// Selected Port for i2c Communication
+		GPIO_PIN6 + GPIO_PIN7,					// Selected Pin/Pins for i2c Communication
+		GPIO_PRIMARY_MODULE_FUNCTION,			// Selected Module Function
+		EUSCI_B0_BASE,							// Selected Module
+		EUSCI_B_I2C_TRANSMIT_MODE
+};
 
 
 
@@ -24,7 +30,6 @@ int main(void)
 {
 	WDT_A_holdTimer();
 
-	uint16_t readValue;
 
 	initI2C(&i2cInitStructure);
 	initUART();
@@ -33,8 +38,10 @@ int main(void)
 
 	while (1)
 	{
-		readValue = ALSensorReadData();
-		sendInt(readValue);
-		ownDelay(100000);
+		PCM_gotoLPM3();
 	}
 }
+
+
+
+

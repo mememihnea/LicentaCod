@@ -13,7 +13,6 @@
 #include "driverlib.h"
 
 typedef struct {
-	eUSCI_I2C_MasterConfig i2cConfig;
 	uint8_t slaveAdress;
 	uint8_t portSelect;
 	uint16_t pinSelect;
