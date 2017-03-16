@@ -44,9 +44,9 @@ lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer32.
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer_a.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/uart.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.h
+lightSensor.obj: ../i2cCommunication.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/string.h
 lightSensor.obj: C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/linkage.h
-lightSensor.obj: ../i2cCommunication.h
 
 ../lightSensor.c: 
 ../lightSensor.h: 
@@ -92,6 +92,6 @@ C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer32.h:
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer_a.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/uart.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.h: 
+../i2cCommunication.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/string.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/linkage.h: 
-../i2cCommunication.h: 
