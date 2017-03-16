@@ -22,6 +22,7 @@ const eUSCI_I2C_MasterConfig i2cConfig ={
 };
 
 
+
 void initI2C(const i2cInitialisationStructure *structure){
 	GPIO_setAsPeripheralModuleFunctionInputPin(structure->portSelect,structure->pinSelect,structure->moduleFunctionSelect);
 	I2C_initMaster(structure->moduleInstanceSelect, &i2cConfig);

@@ -48,6 +48,8 @@ main.obj: C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/inclu
 main.obj: ../i2cCommunication.h
 main.obj: ../lightSensor.h
 main.obj: ../uartCommunication.h
+main.obj: ../delayOwn.h
+main.obj: ../realTimeCLock.h
 
 ../main.c: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/driverlib.h: 
@@ -97,3 +99,5 @@ C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/linkage
 ../i2cCommunication.h: 
 ../lightSensor.h: 
 ../uartCommunication.h: 
+../delayOwn.h: 
+../realTimeCLock.h: 

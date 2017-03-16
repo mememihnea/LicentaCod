@@ -11,7 +11,8 @@
 #include "i2cCommunication.h"
 #include "lightSensor.h"
 #include "uartCommunication.h"
-
+#include "delayOwn.h"
+#include "realTimeCLock.h"
 
 
 const i2cInitialisationStructure i2cInitStructure =
@@ -25,15 +26,16 @@ const i2cInitialisationStructure i2cInitStructure =
 };
 
 
-
 int main(void)
 {
 	WDT_A_holdTimer();
 
 
+
+
 	initI2C(&i2cInitStructure);
 	initUART();
-
+	rtcConfig();
 	ALSensorConfigure();
 
 	while (1)
