@@ -44,10 +44,9 @@ realTimeClock.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer3
 realTimeClock.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer_a.h
 realTimeClock.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/uart.h
 realTimeClock.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.h
+realTimeClock.obj: ../lightSensor.h
 realTimeClock.obj: ../i2cCommunication.h
 realTimeClock.obj: ../uartCommunication.h
-realTimeClock.obj: ../lightSensor.h
-realTimeClock.obj: ../delayOwn.h
 
 ../realTimeClock.c: 
 ../realTimeClock.h: 
@@ -93,7 +92,6 @@ C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer32.h:
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer_a.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/uart.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.h: 
+../lightSensor.h: 
 ../i2cCommunication.h: 
 ../uartCommunication.h: 
-../lightSensor.h: 
-../delayOwn.h: 

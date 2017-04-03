@@ -13,22 +13,37 @@
 #include "uartCommunication.h"
 #include "delayOwn.h"
 #include "realTimeCLock.h"
-
+#include "main.h"
 
 int main(void)
 {
 	WDT_A_holdTimer();
 
+
 	initUART();
 	rtcConfig();
-	ALSensorConfigure();
+	sensorStart();
+	//interruptFlag=0;
+
+	readValue = ALSensorReadData();
+	sendInt(readValue);
+	//ownDelay(100000);
 
 	while (1)
 	{
-		PCM_gotoLPM3();
+		if(interruptFlag==1)
+		{
+			sendString("Outside Interrupt");
+			readValue = ALSensorReadData();
+			sendInt(readValue);
+			//ownDelay(100000);
+		}
+		else
+			PCM_gotoLPM3();
+		interruptFlag=0;
+
 	}
 }
-
 
 
 

@@ -50,6 +50,7 @@ main.obj: ../lightSensor.h
 main.obj: ../uartCommunication.h
 main.obj: ../delayOwn.h
 main.obj: ../realTimeCLock.h
+main.obj: ../main.h
 
 ../main.c: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/driverlib.h: 
@@ -101,3 +102,4 @@ C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/linkage
 ../uartCommunication.h: 
 ../delayOwn.h: 
 ../realTimeCLock.h: 
+../main.h: 

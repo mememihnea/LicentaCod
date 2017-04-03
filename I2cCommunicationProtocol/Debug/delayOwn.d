@@ -44,6 +44,7 @@ delayOwn.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer32.h
 delayOwn.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer_a.h
 delayOwn.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/uart.h
 delayOwn.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.h
+delayOwn.obj: ../uartCommunication.h
 
 ../delayOwn.c: 
 ../delayOwn.h: 
@@ -89,3 +90,4 @@ C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer32.h:
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/timer_a.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/uart.h: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.h: 
+../uartCommunication.h: 

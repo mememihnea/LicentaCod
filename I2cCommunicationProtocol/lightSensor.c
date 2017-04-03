@@ -5,7 +5,7 @@
  *      Author: Mihnea
  */
 
-
+#include "delayOwn.h"
 #include "lightSensor.h"
 #include "i2cCommunication.h"
 #include "driverlib.h"
@@ -22,14 +22,28 @@ const i2cInitialisationStructure i2cInitStructure =
 		GPIO_PIN6 + GPIO_PIN7,					// Selected Pin/Pins for i2c Communication
 		GPIO_PRIMARY_MODULE_FUNCTION,			// Selected Module Function
 		EUSCI_B0_BASE,							// Selected Module
-		EUSCI_B_I2C_TRANSMIT_MODE
+		EUSCI_B_I2C_TRANSMIT_MODE				// Selected Functioning mode
 };
 
 
-void ALSensorConfigure(){
+void sensorStart(){
 	initI2C(&i2cInitStructure);
-	i2cWritewithParam(0x00,0x01); // Selecting the ALS 0x00 0x01
-	i2cWritewithParam(0x10,0x01); // Configuration for ALS: 0~5162 lux (resolution 0.0788 lux/count) 0x10 0x01
+	ownDelay(300);
+	i2cWritewithParam(0x00,0x01); 				// Selecting the ALS 0x00 0x01
+	i2cWritewithParam(0x10,0x01); 				// Configuration for ALS: 0~5162 lux (resolution 0.0788 lux/count) 0x10 0x01
+}
+
+
+void sensorStop(){
+	initI2C(&i2cInitStructure);
+	ownDelay(300);
+	i2cWritewithParam(0x00,0x00); 				// Putting the sensor to sleep
+}
+
+void sensorReadAndPowerDown(){
+	initI2C(&i2cInitStructure);
+	i2cWritewithParam(0x00,0x05); 				// Selecting the ALS read once mode 0x00 0x05
+	i2cWritewithParam(0x10,0x01); 				// Configuration for ALS: 0~5162 lux (resolution 0.0788 lux/count) 0x10 0x01
 }
 
 uint16_t ALSensorReadData(){

@@ -6,6 +6,7 @@
  */
 
 #include "delayOwn.h"
+#include "uartCommunication.h"
 
 #include "driverlib.h"
 #include <msp.h>
@@ -18,6 +19,8 @@ void ownDelay(int number){
 	int i=0;
 	while(i<number)
 		i++;
+	//  1000ms = 250
+	//  150ms = 39
 }
 
 
