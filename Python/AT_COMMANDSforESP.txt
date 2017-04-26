@@ -1,0 +1,10 @@
+Set the same STAIP for both Python code and ESP.
+link ID=0
+
+
+1. AT 				// simple test
+2. AT+CWQAP 			// disconnect from AP
+3. AT+RST			// reset the device
+4. AT+CIPMUX=1			// set to multiple connections
+5. AT+CIPSERVER=1,80		// start server
+6. AT+CIPSEND=0,14		
