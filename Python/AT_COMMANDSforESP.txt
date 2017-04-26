@@ -5,6 +5,7 @@ link ID=0
 1. AT 				// simple test
 2. AT+CWQAP 			// disconnect from AP
 3. AT+RST			// reset the device
-4. AT+CIPMUX=1			// set to multiple connections
-5. AT+CIPSERVER=1,80		// start server
-6. AT+CIPSEND=0,14		
+4. AT+CWMODE=3			// set the device as both server and AP
+5. AT+CIPMUX=1			// set to multiple connections
+6. AT+CIPSERVER=1,80		// start server
+7. AT+CIPSEND=0,14		
