@@ -1,0 +1,6 @@
+c:\users\grigo\documents\visual studio 2015\Projects\TELNETCONSOLE\TELNETCONSOLE\bin\Debug\TELNETCONSOLE.exe.config
+c:\users\grigo\documents\visual studio 2015\Projects\TELNETCONSOLE\TELNETCONSOLE\bin\Debug\TELNETCONSOLE.exe
+c:\users\grigo\documents\visual studio 2015\Projects\TELNETCONSOLE\TELNETCONSOLE\bin\Debug\TELNETCONSOLE.pdb
+c:\users\grigo\documents\visual studio 2015\Projects\TELNETCONSOLE\TELNETCONSOLE\obj\Debug\TELNETCONSOLE.csprojResolveAssemblyReference.cache
+c:\users\grigo\documents\visual studio 2015\Projects\TELNETCONSOLE\TELNETCONSOLE\obj\Debug\TELNETCONSOLE.exe
+c:\users\grigo\documents\visual studio 2015\Projects\TELNETCONSOLE\TELNETCONSOLE\obj\Debug\TELNETCONSOLE.pdb
