@@ -7,5 +7,5 @@ link ID=0
 3. AT+RST			// reset the device
 4. AT+CWMODE=3			// set the device as both server and AP
 5. AT+CIPMUX=1			// set to multiple connections
-6. AT+CIPSERVER=1,80		// start server
+6. AT+CIPSTART=4,"TCP","192.168.213.138",8888		// start server
 7. AT+CIPSEND=0,14		
