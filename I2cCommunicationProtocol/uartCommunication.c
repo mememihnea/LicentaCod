@@ -28,13 +28,11 @@ const eUSCI_UART_Config uartConfig =
 		EUSCI_A_UART_OVERSAMPLING_BAUDRATE_GENERATION  // Oversampling
 };
 
-void initUART(){
-
-
-	GPIO_setAsPeripheralModuleFunctionInputPin(GPIO_PORT_P1, GPIO_PIN1 | GPIO_PIN2 | GPIO_PIN3, GPIO_PRIMARY_MODULE_FUNCTION);
-	CS_setDCOCenteredFrequency(CS_DCO_FREQUENCY_12);
-	UART_initModule(EUSCI_A0_BASE, &uartConfig);
-	UART_enableModule(EUSCI_A0_BASE);
+void initUART(const uartInitialisationStructure *structure){
+	GPIO_setAsPeripheralModuleFunctionInputPin(structure->portSelect, structure->pinSelect, structure->moduleFunctionSelect);
+	CS_setDCOCenteredFrequency(structure->clockSelect);
+	UART_initModule(structure->uartModuleSelect, &uartConfig);
+	UART_enableModule(structure->uartModuleSelect);
 }
 
 void reverse(char s[])

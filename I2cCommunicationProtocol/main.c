@@ -19,29 +19,28 @@ int main(void)
 {
 	WDT_A_holdTimer();
 
-
-	initUART();
-	rtcConfig();
-	sensorStart();
+	//initUART(&WiFiUARTInitStructure);
+	initUART(&pcUARTInitStructure);
+	//rtcConfig();
+	//sensorStart();
 	//interruptFlag=0;
 
-	readValue = ALSensorReadData();
-	sendInt(readValue);
+	//readValue = ALSensorReadData();
+	//sendInt(readValue);
 	//ownDelay(100000);
 
 	while (1)
 	{
-		if(interruptFlag==1)
-		{
-			sendString("Outside Interrupt");
-			readValue = ALSensorReadData();
-			sendInt(readValue);
-			//ownDelay(100000);
-		}
-		else
-			PCM_gotoLPM3();
-		interruptFlag=0;
-
+//		if(interruptFlag==1)
+//		{
+//			readValue = ALSensorReadData();
+//			sendInt(readValue);
+//		}
+//		else
+//			PCM_gotoLPM3();
+//		interruptFlag=0;
+		//UART_transmitData(EUSCI_A2_BASE, 'g');
+		//UART_transmitData(EUSCI_A0_BASE, 'L');
 	}
 }
 

@@ -54,9 +54,6 @@ void RTC_C_IRQHandler(void)
 	if (status & RTC_C_TIME_EVENT_INTERRUPT)
 	{
 		/* Interrupts every minute - Set breakpoint here */
-
-
-		sendString("Inside Interrupt");
 		interruptFlag=1;
 		newTime = RTC_C_getCalendarTime();
 	}

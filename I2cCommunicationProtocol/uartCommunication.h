@@ -12,7 +12,15 @@
 #include <msp.h>
 #include "driverlib.h"
 
-void initUART(); //  Configuration of the UART protocol
+typedef struct {
+	uint8_t portSelect;
+	uint16_t pinSelect;
+	uint8_t moduleFunctionSelect;
+	uint32_t clockSelect;
+	uint32_t uartModuleSelect;
+}uartInitialisationStructure;
+
+void initUART(const uartInitialisationStructure *structure); //  Configuration of the UART protocol
 void reverse(char s[]);
 char *intToString(int number, char string[]);
 void sendString(char string[]); // This function sends a String through the UART protocol
