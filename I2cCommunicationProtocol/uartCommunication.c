@@ -18,9 +18,9 @@ volatile int i;
 const eUSCI_UART_Config uartConfig =
 {
 		EUSCI_A_UART_CLOCKSOURCE_SMCLK,          // SMCLK Clock Source
-		78,                                     // BRDIV = 78
-		2,                                       // UCxBRF = 2
-		0,                                       // UCxBRS = 0
+		6,                                     // BRDIV = 78
+		8,                                       // UCxBRF = 2
+		20,                                       // UCxBRS = 0
 		EUSCI_A_UART_NO_PARITY,                  // No Parity
 		EUSCI_A_UART_LSB_FIRST,                  // LSB First
 		EUSCI_A_UART_ONE_STOP_BIT,               // One stop bit
@@ -33,6 +33,13 @@ void initUART(const uartInitialisationStructure *structure){
 	CS_setDCOCenteredFrequency(structure->clockSelect);
 	UART_initModule(structure->uartModuleSelect, &uartConfig);
 	UART_enableModule(structure->uartModuleSelect);
+}
+
+void initUartPC(){
+	GPIO_setAsPeripheralModuleFunctionInputPin(GPIO_PORT_P1, GPIO_PIN1 | GPIO_PIN2 | GPIO_PIN3, GPIO_PRIMARY_MODULE_FUNCTION);
+	CS_setDCOCenteredFrequency(CS_DCO_FREQUENCY_12);
+	UART_initModule(EUSCI_A0_BASE, &uartConfig);
+	UART_enableModule(EUSCI_A0_BASE);
 }
 
 void reverse(char s[])
@@ -80,4 +87,28 @@ void sendInt(int number){
 	sendString(buffer);
 }
 
+void wifiConnect(){
+	sendString("AT\r\n");
+	__delay_cycles(200000);
+
+	sendString("AT+CWQAP\r\n");
+	__delay_cycles(200000);
+
+	sendString("AT+RST\r\n");
+	__delay_cycles(200000);
+
+	sendString("AT+CWMODE=3\r\n");
+	__delay_cycles(200000);
+
+	sendString("AT+CIPMUX=1\r\n");
+	__delay_cycles(200000);
+
+	sendString("AT+CIPSTART=4,\"TCP\",\"192.168.213.138\",8888");
+	__delay_cycles(200000);
+}
+
+void wifiSend(){
+	sendString("AT+CIPSEND=0,14\r\n");
+	__delay_cycles(200000);
+}
 

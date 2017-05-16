@@ -51,6 +51,7 @@ main.obj: ../uartCommunication.h
 main.obj: ../delayOwn.h
 main.obj: ../realTimeCLock.h
 main.obj: ../main.h
+main.obj: ../dht.h
 
 ../main.c: 
 C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/driverlib.h: 
@@ -103,3 +104,4 @@ C:/Program\ Files\ (x86)/TI/ccsv6/tools/compiler/arm_15.12.3.LTS/include/linkage
 ../delayOwn.h: 
 ../realTimeCLock.h: 
 ../main.h: 
+../dht.h: 

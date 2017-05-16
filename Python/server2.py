@@ -20,19 +20,16 @@ print ('Socket bind complete')
 s.listen(10)
 print ('Socket now listening')
  
-conn, addr = s.accept()
-print ('Connection address:', addr)
-
+ 
+# trebuie sa fac conexiunea sa mearga fara a inchide scriptul de python
+# trebuie pus in while acceptul si trbeuie inchis inainte de iesirea din while
+ 
 #now keep talking with the client
 while 1:
+	conn, addr = s.accept()
+	print ('Connection address:', addr)
     data = conn.recv(1024)
     print ("received data:", data)
     conn.send(data)  # echo
-  
-#data = s.recv(1024)
-#sys.stdout.write(data)
-
-#msg = sys.stdin.readline()
-#s.send(msg)
    
 s.close()
