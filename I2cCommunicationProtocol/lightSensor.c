@@ -26,27 +26,27 @@ const i2cInitialisationStructure i2cInitStructure =
 };
 
 
-void sensorStart(){
+void lightSensorStart(){
 	initI2C(&i2cInitStructure);
-	ownDelay(300);
+	//__delay_cycles(200000);
 	i2cWritewithParam(0x00,0x01); 				// Selecting the ALS 0x00 0x01
 	i2cWritewithParam(0x10,0x01); 				// Configuration for ALS: 0~5162 lux (resolution 0.0788 lux/count) 0x10 0x01
 }
 
 
-void sensorStop(){
+void lightSensorStop(){
 	initI2C(&i2cInitStructure);
 	ownDelay(300);
 	i2cWritewithParam(0x00,0x00); 				// Putting the sensor to sleep
 }
 
-void sensorReadAndPowerDown(){
+void lightSensorReadAndPowerDown(){
 	initI2C(&i2cInitStructure);
 	i2cWritewithParam(0x00,0x05); 				// Selecting the ALS read once mode 0x00 0x05
 	i2cWritewithParam(0x10,0x01); 				// Configuration for ALS: 0~5162 lux (resolution 0.0788 lux/count) 0x10 0x01
 }
 
-uint16_t ALSensorReadData(){
+uint16_t lightSensorReadData(){
 	uint8_t lowValue;
 	uint8_t highValue;
 	uint16_t finalValue = 0x00;

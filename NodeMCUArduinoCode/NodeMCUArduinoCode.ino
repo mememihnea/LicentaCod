@@ -43,25 +43,30 @@ void loop() {
         return;
   }
 
-  String data = "";
+  char data[30]; // aici e o buba cu marimea la data
   while (swSer.available()) {
     char character = swSer.read();
-    data.concat(character);
-    Serial.write(swSer.read());
+
+    //data[0] = '\0';
+    for(int i=1; i <= sizeof(data); i++){
+      data[i] = '\0';
+      data[i-1] = character;
+    }
+    //Serial.write(swSer.read());
+    // This will send the request to the server
+    client.print(data);
     yield();
   }
+  if (!client.connected()){
+      Serial.println();
+      Serial.println("disconnecting.");
+      client.stop();
+    }
 
-  
-  // This will send the request to the server
-  //client.print("Send this data to server");
-
-  //read back one line from server
-  //String line = client.readStringUntil('\r');
-  //client.println(line);
-
-  Serial.println("closing connection");
-  client.stop();
-    
-  Serial.println("wait 5 sec...");
-  delay(5000);
+//    Serial.println("wait 5 sec...");
+//    delay(5000);
 }
+    
+
+
+

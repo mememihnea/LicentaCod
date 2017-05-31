@@ -1,0 +1,6 @@
+D:\Scoala\LICENTA\Code\ClientEnd\ClientEnd\bin\Debug\ClientEnd.exe.config
+D:\Scoala\LICENTA\Code\ClientEnd\ClientEnd\bin\Debug\ClientEnd.exe
+D:\Scoala\LICENTA\Code\ClientEnd\ClientEnd\bin\Debug\ClientEnd.pdb
+D:\Scoala\LICENTA\Code\ClientEnd\ClientEnd\obj\Debug\ClientEnd.csprojResolveAssemblyReference.cache
+D:\Scoala\LICENTA\Code\ClientEnd\ClientEnd\obj\Debug\ClientEnd.exe
+D:\Scoala\LICENTA\Code\ClientEnd\ClientEnd\obj\Debug\ClientEnd.pdb

@@ -47,6 +47,7 @@ realTimeClock.obj: C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.
 realTimeClock.obj: ../lightSensor.h
 realTimeClock.obj: ../i2cCommunication.h
 realTimeClock.obj: ../uartCommunication.h
+realTimeClock.obj: ../temp_humidSensor.h
 
 ../realTimeClock.c: 
 ../realTimeClock.h: 
@@ -95,3 +96,4 @@ C:/Program\ Files\ (x86)/TI/ccsv6/driverlib/MSP432P4xx/wdt_a.h:
 ../lightSensor.h: 
 ../i2cCommunication.h: 
 ../uartCommunication.h: 
+../temp_humidSensor.h: 

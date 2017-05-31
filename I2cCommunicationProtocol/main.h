@@ -12,6 +12,8 @@
 #include <msp.h>
 #include "driverlib.h"
 
+
+
 const uartInitialisationStructure WiFiUARTInitStructure =
 {
 		GPIO_PORT_P3,							// Selected Port for UART Communication
@@ -31,12 +33,7 @@ const uartInitialisationStructure pcUARTInitStructure =
 };
 
 
-
 uint16_t readValue;
-int contor=0;
-
-char wifiSSID[] = "Students";
-char wifiPass[] = "p4cm4n123";
 
 int main(void);
 

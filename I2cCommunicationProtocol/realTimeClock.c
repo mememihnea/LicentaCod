@@ -12,6 +12,8 @@
 #include "lightSensor.h"
 #include "i2cCommunication.h"
 #include "uartCommunication.h"
+#include "temp_humidSensor.h"
+
 
 
 /* Standard Includes */
@@ -53,8 +55,20 @@ void RTC_C_IRQHandler(void)
 
 	if (status & RTC_C_TIME_EVENT_INTERRUPT)
 	{
+//		uint16_t readValue;
+		humidity &= 0xffff;
+		temperature &= 0xffff;
 		/* Interrupts every minute - Set breakpoint here */
-		interruptFlag=1;
+
+//		readValue = lightSensorReadData();
+//		sendInt(readValue);
+
+		configureDHT();
+		readDHT();
+		sendInt(EUSCI_A2_BASE, humidity/10);
+		sendInt(EUSCI_A2_BASE, temperature/10);
+
+		//interruptFlag=1;
 		newTime = RTC_C_getCalendarTime();
 	}
 }

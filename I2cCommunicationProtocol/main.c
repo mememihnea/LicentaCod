@@ -14,61 +14,44 @@
 #include "delayOwn.h"
 #include "realTimeCLock.h"
 #include "main.h"
-#include "dht.h"
+#include "temp_humidSensor.h"
 
 int main(void)
 {
 	WDT_A_holdTimer();
 
-	configureDHT();
-	//configurePorts();
+	initUART(&pcUARTInitStructure);
+	initUART(&WiFiUARTInitStructure);
 	//rtcConfig();
-	//sensorStart();
-	//interruptFlag = 1;
+	lightSensorStart();
+	//configureDHT();
+	configurePorts();
+
 	while (1)
 	{
-		humidity &= 0xffff;
-		temperature &= 0xffff;
-		readDHT();
-		__delay_cycles(200000);
-		__delay_cycles(200000);
-		__delay_cycles(200000);
-		__delay_cycles(200000);
+		//PCM_gotoLPM3();
+
+		//sendString(EUSCI_A2_BASE,'Salut');
+//		UART_transmitData(EUSCI_A2_BASE, 'a'+1);
+//		__delay_cycles(10000);
 
 //		if(interruptFlag==1)
 //		{
-//			readValue = sensorReadAndPowerDown();
-//			sendInt(readValue);
+			readValue = lightSensorReadData();
+			sendInt(EUSCI_A2_BASE, readValue);
+			__delay_cycles(10000000);
+
+//			readDHT();
+//			sendInt(humidity/10);
+//			sendInt(temperature/10);
+//
 //			interruptFlag=0;
 //		}
 //		else
 //		{
 //			PCM_gotoLPM3();
-//			//PCM_shutdownDevice(PCM_LPM35_VCORE0);
-//			//PCM_shutdownDevice(PCM_LPM35_VCORE0);
 //		}
 	}
-	//initUART(&WiFiUARTInitStructure);
-	//initUartPC();
-	//rtcConfig();
-	//sensorStart();
-	//interruptFlag=0;
-
-	//readValue = ALSensorReadData();
-	//sendInt(readValue);
-	//ownDelay(100000);
-
-	//				if(interruptFlag==1)
-	//				{
-	//					readValue = ALSensorReadData();
-	//					sendInt(readValue);
-	//				}
-	//				else
-	//					PCM_gotoLPM3();
-	//				interruptFlag=0;
-
-
-	//wifiConnect();
 }
 
 
