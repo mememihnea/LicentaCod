@@ -4,7 +4,8 @@
 const char* ssid = "Students";
 const char* password = "p4cm4n123";
 const uint16_t port = 8888;
-const char * host = "192.168.213.138"; 
+const char * host = "192.168.213.138";
+char data[10]; // aici e o buba cu marimea la data
 
 SoftwareSerial swSer(14, 12, false, 128);
 
@@ -42,21 +43,19 @@ void loop() {
         delay(5000);
         return;
   }
-
-  char data[30]; // aici e o buba cu marimea la data
+ 
   while (swSer.available()) {
-    char character = swSer.read();
-
-    //data[0] = '\0';
-    for(int i=1; i <= sizeof(data); i++){
-      data[i] = '\0';
-      data[i-1] = character;
+    int availableBytes = swSer.available();
+    
+    for(int i=1; i <= availableBytes; i++){
+        char character = swSer.read();
+        data[i] = '\0';
+        data[i-1] = character;
     }
-    //Serial.write(swSer.read());
-    // This will send the request to the server
-    client.print(data);
+    client.println(data);
     yield();
-  }
+ }
+
   if (!client.connected()){
       Serial.println();
       Serial.println("disconnecting.");
